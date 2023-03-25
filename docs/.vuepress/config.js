@@ -30,44 +30,59 @@ module.exports = {
       logo: '/assets/img/logo.png',
       nav: [
         { text: 'Home', link: '/' },
-        { text: 'Guide', link: '/about' },
+        { text: 'About', link: '/about' },
         {
             text: 'Languages',
             ariaLabel: 'Language Menu',
             items: [
-              { text: 'Home', link: '/' },
-              { text: 'Guide', link: '/about' }
+              { text: 'C++', link: '/cpp' },
+              { text: 'Go', link: '/go' },
+              { text: 'Java', link: '/java' },
+              { text: 'Python', link: '/python' },
             ]
         },
         {
-            text: 'Languages2',
-            items: [
-              { text: 'Group1', items: [
-                { text: 'Chinese', link: '/' },
-                { text: 'Japanese', link: '/about' }
-              ] },
-              { text: 'Group2', items: [
-                { text: 'Chinese', link: '/' },
-                { text: 'Japanese', link: '/about' }
-              ] }
-            ]
-        },
+          text: 'Tools',
+          items: [
+            { text: 'Tmux', link: '/Tools/tmux' },
+
+          ]
+      },
+        // {
+        //     text: 'Languages',
+        //     ariaLabel: 'Language Menu',
+        //     items: [
+        //       { text: 'Group1', items: [
+        //         { text: 'Chinese', link: '/' },
+        //         { text: 'Japanese', link: '/about' }
+        //       ] },
+        //       { text: 'Group2', items: [
+        //         { text: 'Chinese', link: '/' },
+        //         { text: 'Japanese', link: '/about' }
+        //       ] }
+        //     ]
+        // },
       ],
       sidebar: {
         '/Cpp/': [
-            'Cpp-aaa',
-            'Cpp-bbb',
-            'Cpp-ccc',
+            // 'Cpp-aaa',
+            // 'Cpp-bbb',
+            // 'Cpp-ccc',
         ],
 
         '/Go/': [
-            'Go-aaa',      
-            'Go-bbb', 
-            'Go-ccc',
+            // 'Go-aaa',      
+            // 'Go-bbb', 
+            // 'Go-ccc',
         ],
-
+        
         '/': [
             '',
+            // 'tmux',
+            // 'java',
+            // 'python',
+            // 'go',
+            // 'cpp',
         ],
         
        }
