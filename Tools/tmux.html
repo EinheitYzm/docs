@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tmux操作指南 | 凡事发生必有利于我</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/docs/favicon.ico">
+    <meta name="description" content="凡事发生必有利于我的随记">
+    <meta name="author" content="Salvatore">
+    <meta name="keywords" content="算法刷题记录，编程语言技术文档，面试八股记录，凡事发生必有利于我">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.732fc518.css" as="style"><link rel="preload" href="/docs/assets/js/app.b07d6ba1.js" as="script"><link rel="preload" href="/docs/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/docs/assets/js/17.ff61d613.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.8492f219.js"><link rel="prefetch" href="/docs/assets/js/11.6905d251.js"><link rel="prefetch" href="/docs/assets/js/12.1b3c29cb.js"><link rel="prefetch" href="/docs/assets/js/13.b53589e6.js"><link rel="prefetch" href="/docs/assets/js/14.c522d284.js"><link rel="prefetch" href="/docs/assets/js/15.eca51f4c.js"><link rel="prefetch" href="/docs/assets/js/16.f8cf6a48.js"><link rel="prefetch" href="/docs/assets/js/18.1f35ee57.js"><link rel="prefetch" href="/docs/assets/js/19.1a474624.js"><link rel="prefetch" href="/docs/assets/js/20.b6dcdfa4.js"><link rel="prefetch" href="/docs/assets/js/21.51cd363f.js"><link rel="prefetch" href="/docs/assets/js/22.214deb13.js"><link rel="prefetch" href="/docs/assets/js/3.d9b695e0.js"><link rel="prefetch" href="/docs/assets/js/4.d12742be.js"><link rel="prefetch" href="/docs/assets/js/5.216cae74.js"><link rel="prefetch" href="/docs/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/docs/assets/js/7.f68a0bec.js"><link rel="prefetch" href="/docs/assets/js/8.690aa5e4.js"><link rel="prefetch" href="/docs/assets/js/9.f316d8c0.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.732fc518.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/assets/img/logo.png" alt="凡事发生必有利于我" class="logo"> <span class="site-name can-hide">凡事发生必有利于我</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/about.html" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/cpp.html" class="nav-link">
+  C++
+</a></li><li class="dropdown-item"><!----> <a href="/docs/go.html" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/docs/java.html" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/docs/python.html" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DB" class="dropdown-title"><span class="title">DB</span> <span class="arrow down"></span></button> <button type="button" aria-label="DB" class="mobile-dropdown-title"><span class="title">DB</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/Mysql/Mysql_question.html" class="nav-link">
+  Mysql
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Cache" class="dropdown-title"><span class="title">Cache</span> <span class="arrow down"></span></button> <button type="button" aria-label="Cache" class="mobile-dropdown-title"><span class="title">Cache</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/Redis/Redis_question.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Tools" class="dropdown-title"><span class="title">Tools</span> <span class="arrow down"></span></button> <button type="button" aria-label="Tools" class="mobile-dropdown-title"><span class="title">Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/Tools/tmux.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Tmux
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/about.html" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/cpp.html" class="nav-link">
+  C++
+</a></li><li class="dropdown-item"><!----> <a href="/docs/go.html" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/docs/java.html" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/docs/python.html" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DB" class="dropdown-title"><span class="title">DB</span> <span class="arrow down"></span></button> <button type="button" aria-label="DB" class="mobile-dropdown-title"><span class="title">DB</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/Mysql/Mysql_question.html" class="nav-link">
+  Mysql
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Cache" class="dropdown-title"><span class="title">Cache</span> <span class="arrow down"></span></button> <button type="button" aria-label="Cache" class="mobile-dropdown-title"><span class="title">Cache</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/Redis/Redis_question.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Tools" class="dropdown-title"><span class="title">Tools</span> <span class="arrow down"></span></button> <button type="button" aria-label="Tools" class="mobile-dropdown-title"><span class="title">Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/Tools/tmux.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Tmux
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Tmux操作指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/Tools/tmux.html#什么是tmux" class="sidebar-link">什么是Tmux</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/Tools/tmux.html#基本用法" class="sidebar-link">基本用法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/Tools/tmux.html#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/docs/Tools/tmux.html#启动" class="sidebar-link">启动</a></li><li class="sidebar-sub-header"><a href="/docs/Tools/tmux.html#退出" class="sidebar-link">退出</a></li><li class="sidebar-sub-header"><a href="/docs/Tools/tmux.html#会话管理" class="sidebar-link">会话管理</a></li><li class="sidebar-sub-header"><a href="/docs/Tools/tmux.html#窗口管理" class="sidebar-link">窗口管理</a></li><li class="sidebar-sub-header"><a href="/docs/Tools/tmux.html#窗格操作" class="sidebar-link">窗格操作</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="什么是tmux"><a href="#什么是tmux" class="header-anchor">#</a> 什么是Tmux</h2> <p>一种将会话Session与窗口Window解绑的工具</p> <ul><li>允许在单个窗口中，访问多个对话</li> <li>可以让新窗口接入已经存在的会话</li> <li>允许每个会话有多个连接窗口，可多人实时共享会话</li> <li>支持窗口水平和垂直拆分</li></ul> <h2 id="基本用法"><a href="#基本用法" class="header-anchor">#</a> 基本用法</h2> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># Ubuntu or Debian</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> tmux
+
+<span class="token comment"># Centos or Fedora</span>
+<span class="token function">sudo</span> yum <span class="token function">install</span> tmux
+
+<span class="token comment"># Mac</span>
+brew <span class="token function">install</span> tmux
+</code></pre></div><h3 id="启动"><a href="#启动" class="header-anchor">#</a> 启动</h3> <p>键入<code>tmux</code>命令，就进入了 Tmux 窗口</p> <div class="language- extra-class"><pre class="language-text"><code>tmux
+</code></pre></div><p>命令会启动 Tmux 窗口，底部有一个状态栏。状态栏的左侧是窗口信息（编号和名称），右侧是系统信息</p> <h3 id="退出"><a href="#退出" class="header-anchor">#</a> 退出</h3> <p>按下<code>Ctrl+d</code>或者显式输入<code>exit</code>命令，就可以退出 Tmux 窗口。</p> <div class="language- extra-class"><pre class="language-text"><code>exit
+</code></pre></div><h3 id="会话管理"><a href="#会话管理" class="header-anchor">#</a> 会话管理</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 新建会话</span>
+tmux new <span class="token parameter variable">-s</span> <span class="token operator">&lt;</span>session-name<span class="token operator">&gt;</span>
+
+<span class="token comment"># 查看会话</span>
+tmux <span class="token function">ls</span>
+tmux list-session
+
+<span class="token comment"># 分离会话</span>
+tmux detach
+
+<span class="token comment"># 接入会话</span>
+tmux attach <span class="token parameter variable">-t</span> <span class="token number">0</span>								<span class="token comment"># 按会话编号</span>
+tmux attach <span class="token parameter variable">-t</span> <span class="token operator">&lt;</span>session-name<span class="token operator">&gt;</span>		<span class="token comment"># 按会话名称</span>
+
+<span class="token comment"># 杀死会话</span>
+tmux kill-session <span class="token parameter variable">-t</span> <span class="token number">0</span>								<span class="token comment"># 按会话编号 </span>
+tmux kill-session <span class="token parameter variable">-t</span> <span class="token operator">&lt;</span>session-name<span class="token operator">&gt;</span>		<span class="token comment"># 按会话名称</span>
+
+<span class="token comment"># 切换会话</span>
+tmux switch <span class="token parameter variable">-t</span> <span class="token number">0</span>								<span class="token comment"># 按会话编号</span>
+tmux switch <span class="token parameter variable">-t</span> <span class="token operator">&lt;</span>session-name<span class="token operator">&gt;</span>		<span class="token comment"># 按会话名称</span>
+
+<span class="token comment"># 重命名会话</span>
+tmux rename-session <span class="token parameter variable">-t</span> <span class="token number">0</span> <span class="token operator">&lt;</span>new-name<span class="token operator">&gt;</span>								<span class="token comment"># 按会话编号</span>
+tmux rename-session <span class="token parameter variable">-t</span> <span class="token operator">&lt;</span>session-name<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>new-name<span class="token operator">&gt;</span>	<span class="token comment"># 按会话名称</span>
+
+<span class="token comment"># 快捷键</span>
+Ctrl+b d：分离当前会话。
+Ctrl+b s：列出所有会话。
+Ctrl+b $：重命名当前会话。
+</code></pre></div><h3 id="窗口管理"><a href="#窗口管理" class="header-anchor">#</a> 窗口管理</h3> <p>Tmux 允许新建多个窗口。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 新建窗口</span>
+tmux new-window
+tmux new-window <span class="token parameter variable">-n</span> <span class="token operator">&lt;</span>window-name<span class="token operator">&gt;</span>	<span class="token comment">#	指定窗口名称</span>
+
+<span class="token comment"># 切换窗口</span>
+tmux select-window <span class="token parameter variable">-t</span> <span class="token operator">&lt;</span>window-number<span class="token operator">&gt;</span>	<span class="token comment"># 切换到指定编号的窗口</span>
+tmux select-window <span class="token parameter variable">-t</span> <span class="token operator">&lt;</span>window-name<span class="token operator">&gt;</span>		<span class="token comment"># 切换到指定名称的窗口</span>
+
+<span class="token comment"># 重命名窗口</span>
+tmux rename-window <span class="token operator">&lt;</span>new-name<span class="token operator">&gt;</span>
+
+<span class="token comment"># 窗口快捷键</span>
+Ctrl+b c：创建一个新窗口，状态栏会显示多个窗口的信息。
+Ctrl+b p：切换到上一个窗口（按照状态栏上的顺序）。
+Ctrl+b n：切换到下一个窗口（按照状态栏上的顺序）。
+Ctrl+b <span class="token operator">&lt;</span>number<span class="token operator">&gt;</span>：切换到指定编号的窗口，其中的<span class="token operator">&lt;</span>number<span class="token operator">&gt;</span>是状态栏上的窗口编号。
+Ctrl+b w：从列表中选择窗口。
+Ctrl+b ,：窗口重命名。
+</code></pre></div><h3 id="窗格操作"><a href="#窗格操作" class="header-anchor">#</a> 窗格操作</h3> <p>Tmux 可以将窗口分成多个窗格（pane），每个窗格运行不同的命令。</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 划分窗格</span>
+tmux split-window			<span class="token comment"># 划分为上下两个窗格</span>
+tmux split-window <span class="token parameter variable">-h</span> 	<span class="token comment"># 划分为左右两个窗格</span>
+
+<span class="token comment"># 移动光标</span>
+tmux select-pane <span class="token parameter variable">-U</span>		<span class="token comment"># 光标切换到上方窗格</span>
+tmux select-pane <span class="token parameter variable">-D</span>		<span class="token comment"># 光标切换到下方窗格</span>
+tmux select-pane <span class="token parameter variable">-L</span>		<span class="token comment"># 光标切换到左边窗格</span>
+tmux select-pane <span class="token parameter variable">-R</span>		<span class="token comment"># 光标切换到右边窗格</span>
+
+<span class="token comment"># 交换窗格位置</span>
+$ tmux swap-pane <span class="token parameter variable">-U</span>		<span class="token comment"># 当前窗格上移</span>
+$ tmux swap-pane <span class="token parameter variable">-D</span>		<span class="token comment"># 当前窗格下移</span>
+
+<span class="token comment"># 窗格快捷键</span>
+Ctrl+b %：划分左右两个窗格。
+Ctrl+b &quot;  划分上下两个窗格。
+Ctrl+b <span class="token operator">&lt;</span>arrow key<span class="token operator">&gt;</span>：光标切换到其他窗格。<span class="token operator">&lt;</span>arrow key<span class="token operator">&gt;</span>是指向要切换到的窗格的方向键，比如切换到下方窗格，就按方向键↓。
+Ctrl+b <span class="token punctuation">;</span>：光标切换到上一个窗格。
+Ctrl+b o：光标切换到下一个窗格。
+Ctrl+b <span class="token punctuation">{</span>：当前窗格与上一个窗格交换位置。
+Ctrl+b <span class="token punctuation">}</span>：当前窗格与下一个窗格交换位置。
+Ctrl+b Ctrl+o：所有窗格向前移动一个位置，第一个窗格变成最后一个窗格。
+Ctrl+b Alt+o：所有窗格向后移动一个位置，最后一个窗格变成第一个窗格。
+Ctrl+b x：关闭当前窗格。
+Ctrl+b <span class="token operator">!</span>：将当前窗格拆分为一个独立窗口。
+Ctrl+b z：当前窗格全屏显示，再使用一次会变回原来大小。
+Ctrl+b Ctrl+<span class="token operator">&lt;</span>arrow key<span class="token operator">&gt;</span>：按箭头方向调整窗格大小。
+Ctrl+b q：显示窗格编号。
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2023年3月25日星期六晚上6点43分</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.b07d6ba1.js" defer></script><script src="/docs/assets/js/2.733019b2.js" defer></script><script src="/docs/assets/js/17.ff61d613.js" defer></script>
+  </body>
+</html>
